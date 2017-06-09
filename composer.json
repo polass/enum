@@ -1,0 +1,28 @@
+{
+    "name": "polass/enum",
+    "description": "Enum class",
+    "type": "library",
+    "homepage": "https://github.com/polass/enum",
+    "keywords": [ "enum" ],
+    "authors": [
+        {
+            "name": "abesuke"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~5.7"
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "autoload": {
+        "psr-4": {
+            "Polass\\": "src/",
+            "Tests\\": "tests/"
+        }
+    },
+    "license": "MIT"
+}
