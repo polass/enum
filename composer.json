@@ -28,5 +28,6 @@
             "Polass\\Tests\\": "tests/"
         }
     },
+	"minimum-stability": "dev",
     "license": "MIT"
 }
