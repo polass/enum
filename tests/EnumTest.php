@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests;
+namespace Polass\Tests;
 
 use PHPUnit\Framework\TestCase;
 use Polass\Enum\Enum;

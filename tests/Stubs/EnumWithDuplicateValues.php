@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Stubs;
+namespace Polass\Tests\Stubs;
 
 use Polass\Enum\Enum;
 

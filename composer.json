@@ -20,8 +20,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Polass\\": "src/",
-            "Tests\\": "tests/"
+            "Polass\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Polass\\Tests\\": "tests/"
         }
     },
     "license": "MIT"
