@@ -6,7 +6,8 @@
     "keywords": [ "enum" ],
     "authors": [
         {
-            "name": "abesuke"
+            "name": "Salop, Inc.",
+            "homepage": "http://www.salop.co.jp/"
         }
     ],
     "require": {
