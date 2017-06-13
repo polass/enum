@@ -6,7 +6,8 @@
     "keywords": [ "enum" ],
     "authors": [
         {
-            "name": "abesuke"
+            "name": "Salop, Inc.",
+            "homepage": "http://www.salop.co.jp/"
         }
     ],
     "require": {
@@ -28,6 +29,5 @@
             "Polass\\Tests\\": "tests/"
         }
     },
-	"minimum-stability": "dev",
     "license": "MIT"
 }
