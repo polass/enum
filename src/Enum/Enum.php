@@ -76,8 +76,7 @@ abstract class Enum
      */
     public function is($key)
     {
-        if ($key instanceOf static)
-        {
+        if ($key instanceOf static) {
             return $this->key === $key->key;
         }
 
@@ -92,8 +91,7 @@ abstract class Enum
      */
     public function equals($value)
     {
-        if ($value instanceOf static)
-        {
+        if ($value instanceOf static) {
             return $this->value === $value->value;
         }
 
