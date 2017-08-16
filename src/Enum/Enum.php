@@ -4,19 +4,14 @@ namespace Polass\Enum;
 
 use InvalidArgumentException;
 use BadMethodCallException;
-use ReflectionClass;
+use Polass\Enum\Traits\HasConstants;
 use Polass\Enum\Exceptions\ConstantNotDefinedException;
 use Polass\Enum\Exceptions\ConstantNotFoundException;
 use Polass\Enum\Exceptions\ConstantWithValueNotFoundException;
 
 abstract class Enum
 {
-    /**
-     * 定数のキャッシュ
-     *
-     * @var array
-     */
-    private static $_constants = [];
+    use HasConstants;
 
     /**
      * デフォルト値を表す定数の名前
@@ -81,8 +76,7 @@ abstract class Enum
      */
     public function is($key)
     {
-        if ($key instanceOf static)
-        {
+        if ($key instanceOf static) {
             return $this->key === $key->key;
         }
 
@@ -97,8 +91,7 @@ abstract class Enum
      */
     public function equals($value)
     {
-        if ($value instanceOf static)
-        {
+        if ($value instanceOf static) {
             return $this->value === $value->value;
         }
 
@@ -166,23 +159,6 @@ abstract class Enum
     public static function from($value, $nullable = false)
     {
         return static::make(static::keyOf($value, ! $nullable), $nullable);
-    }
-
-    /**
-     * 継承した Enum クラスが持つ定数の値を定数名をキーとして配列で取得
-     *
-     * @return array
-     */
-    public static function constants()
-    {
-        $class = get_called_class();
-
-        if (! array_key_exists($class, self::$_constants))
-        {
-            self::$_constants[$class] = (new ReflectionClass($class))->getConstants();
-        }
-
-        return self::$_constants[$class];
     }
 
     /**
