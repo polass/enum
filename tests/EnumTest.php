@@ -329,6 +329,26 @@ class EnumTest extends TestCase
     }
 
     /**
+     * `implodedKeys()` のテスト
+     *
+     */
+    public function testImplodedKeys()
+    {
+        $this->assertEquals('FOO,BAR', Stubs\EnumWithDefault::implodedKeys());
+        $this->assertEquals('FOO|BAR', Stubs\EnumWithDefault::implodedKeys('|'));
+    }
+
+    /**
+     * `implodedValues()` のテスト
+     *
+     */
+    public function testImplodedValues()
+    {
+        $this->assertEquals('foo,bar', Stubs\EnumWithDefault::implodedValues());
+        $this->assertEquals('foo|bar', Stubs\EnumWithDefault::implodedValues('|'));
+    }
+
+    /**
      * `has()` のテスト
      *
      */
