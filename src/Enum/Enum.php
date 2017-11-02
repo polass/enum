@@ -198,6 +198,28 @@ abstract class Enum
     }
 
     /**
+     * Enum が取り得るキーを区切り文字で区切った文字列で取得
+     *
+     * @param string $glue
+     * @return string
+     */
+    public static function implodedKeys($glue = ',')
+    {
+        return implode($glue, static::keys());
+    }
+
+    /**
+     * Enum が取り得る値を区切り文字で区切った文字列で取得
+     *
+     * @param string $glue
+     * @return string
+     */
+    public static function implodedValues($glue = ',')
+    {
+        return implode($glue, static::values());
+    }
+
+    /**
      * その名前の定数を持っているか
      *
      * @param string $key
